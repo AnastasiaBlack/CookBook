@@ -1,0 +1,20 @@
+package com.cookBook.service;
+
+import com.cookBook.dto.DishDTO;
+import com.cookBook.entity.Dish;
+import com.cookBook.repository.DishRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DishCRUDService {
+    @Autowired
+    DishRepository dishRepository;
+
+    public DishDTO saveDish(DishDTO dishDto) {
+        Dish dish = new Dish(dishDto);
+        dishRepository.save(dish);
+        dishDto.setId(dish.getId());
+        return dishDto;
+    }
+}
