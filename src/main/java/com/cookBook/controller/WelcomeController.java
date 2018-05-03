@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class WelcomeController {
@@ -20,5 +22,10 @@ public class WelcomeController {
         dishDto.setName("Lasagna");
 //        return dishCRUDService.saveDish(dishDto);
         return dishDto;
+    }
+
+    @RequestMapping("/getAllDishes")
+    public List<DishDTO> getAllDishes() {
+        return dishCRUDService.getAll();
     }
 }

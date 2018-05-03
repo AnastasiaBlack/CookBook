@@ -27,7 +27,7 @@ module.exports = ""
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"cookBook.jpg\">\n</div>\n<h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/AnastasiaBlack\">My GIT repository</a></h2>\n<p>{{ dish }}</p>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Cook Book picture\" src=\"https://i.pinimg.com/originals/22/83/73/2283739ad286c35d003bd2dd3872c4f2.jpg\">\n</div>\n<h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/AnastasiaBlack\">My GIT repository</a></h2>\n<p>{{ dish }}</p>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppComponent = /** @class */ (function () {
     function AppComponent(http) {
         this.http = http;
-        this.title = 'app';
+        this.title = 'your cooking guide';
         console.log('hello, world!12345312');
     }
     ;
