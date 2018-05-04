@@ -8,7 +8,7 @@ export class DishService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-      return this.http.get('http://localhost:8080/getAllDishes');
+      return this.http.get('http://localhost:8080/dishes');
   }
 
 }

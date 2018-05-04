@@ -24,7 +24,7 @@ public class WelcomeController {
         return dishDto;
     }
 
-    @RequestMapping("/getAllDishes")
+    @RequestMapping("/dishes")
     public List<DishDTO> getAllDishes() {
         return dishCRUDService.getAll();
     }

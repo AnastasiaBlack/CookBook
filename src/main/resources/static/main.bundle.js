@@ -130,7 +130,7 @@ module.exports = ""
 /***/ "./src/app/dish-list/dish-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>DISHES</h2>\n<div *ngFor=\"let d of dishes\">\n  {{d.id}} {{d.name}}\n</div>"
+module.exports = "<h2>DISHES</h2>\n<div *ngFor=\"let d of dishes\">\n  {{d.id}}. {{d.name}}\n</div>"
 
 /***/ }),
 
@@ -201,7 +201,7 @@ var DishService = /** @class */ (function () {
         this.http = http;
     }
     DishService.prototype.getAll = function () {
-        return this.http.get('http://localhost:8080/getAllDishes');
+        return this.http.get('http://localhost:8080/dishes');
     };
     DishService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */])(),
