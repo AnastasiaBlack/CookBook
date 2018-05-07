@@ -21,10 +21,11 @@ export class DishListComponent implements OnInit {
             error => console.log(error))
     }
 
-    publishDish(dish: string) {
-        this.dishService.postDish(dish).subscribe(data => {
+    publishDish(dish: any) {
+        this.dishService.postDish(dish.value).subscribe(data => {
                 this.dishes = data;
             },
-            error => console.log(error))
+            error => console.log(error));
+        dish.value = '';
     }
 }
