@@ -1,14 +1,21 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class DishService {
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) {
+    }
 
-  getAll(): Observable<any> {
-      return this.http.get('http://localhost:8080/dishes');
-  }
+    getAll(): Observable<any> {
+        return this.http.get('http://localhost:8080/dishes');
+    }
 
+    postDish(dishName: string): Observable<any> {
+        return this.http.post('http://localhost:8080/dish',
+            {
+                name: dishName
+            });
+    }
 }

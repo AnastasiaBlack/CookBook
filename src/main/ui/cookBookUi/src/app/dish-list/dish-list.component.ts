@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DishService} from "../shared";
+import {reject, resolve} from "q";
 
 @Component({
     selector: 'app-dish-list',
@@ -20,4 +21,10 @@ export class DishListComponent implements OnInit {
             error => console.log(error))
     }
 
+    publishDish(dish: string) {
+        this.dishService.postDish(dish).subscribe(data => {
+                this.dishes = data;
+            },
+            error => console.log(error))
+    }
 }

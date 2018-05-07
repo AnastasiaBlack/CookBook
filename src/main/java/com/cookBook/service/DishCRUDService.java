@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,9 +24,9 @@ public class DishCRUDService {
     }
 
     public List<DishDTO> getAll() {
-        List<Dish> dishes= dishRepository.findAll();
+        List<Dish> dishes = dishRepository.findAll();
         List<DishDTO> dishDTOs = new ArrayList<>();
         dishes.stream().forEach(dish -> dishDTOs.add(new DishDTO().dishToDTO(dish)));
-        return dishDTOs;
+        return dishDTOs.stream().sorted(Comparator.comparingLong(DishDTO::getId).reversed()).collect(Collectors.toList());
     }
 }

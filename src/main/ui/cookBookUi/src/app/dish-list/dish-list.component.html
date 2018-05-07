@@ -1,4 +1,16 @@
+<form class="form-inline">
+    <div class="form-group">
+        <input type="text"
+               class="form-control"
+               placeholder="Enter the name of a dish to save"
+               #dish>
+    </div>
+    <button type="button"
+            class="btn btn-primary"
+            (click)="publishDish(dish.value)">НАЖАТЬ
+    </button>
+</form>
 <h2>DISHES</h2>
 <div *ngFor="let d of dishes">
-  {{d.id}}. {{d.name}}
+    {{d.name}}
 </div>
