@@ -22,7 +22,6 @@ public class Dish {
     }
 
     public Dish () {
-
     }
 
     public Integer getId() {

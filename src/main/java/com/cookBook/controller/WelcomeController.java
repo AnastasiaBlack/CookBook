@@ -11,8 +11,12 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class WelcomeController {
+    private DishCRUDService dishCRUDService;
+
     @Autowired
-    DishCRUDService dishCRUDService;
+    public WelcomeController(DishCRUDService dishCRUDService) {
+        this.dishCRUDService = dishCRUDService;
+    }
 
     @RequestMapping("/welcome")
     public DishDTO welcome() {

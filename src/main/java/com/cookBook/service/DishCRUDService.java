@@ -13,8 +13,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class DishCRUDService {
+    private DishRepository dishRepository;
+
     @Autowired
-    DishRepository dishRepository;
+    public DishCRUDService(DishRepository dishRepository) {
+        this.dishRepository = dishRepository;
+    }
 
     public DishDTO saveDish(DishDTO dishDto) {
         Dish dish = new Dish(dishDto);
