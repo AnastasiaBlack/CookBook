@@ -15,11 +15,10 @@
 
 <h2 style="margin-top: 10pt;">DISHES</h2>
 
-<ul style="width: 20%" class="list-group" *ngFor="let d of dishes">
-    <a href="https://www.google.com.ua/search?biw=2133&bih=1082&ei=J0rwWuuwAqSJmgXU95yoBA&q={{d.name}}&oq={{d.name}}&gs_l=psy-ab.3..0i67k1l2j0i20i263k1j0i67k1l2j0l4j0i67k1.2208240.2208896.0.2210791.5.5.0.0.0.0.112.428.0j4.4.0....0...1.1.64.psy-ab..1.4.428...0i131k1.0.TCpGxplhhQE"
-       target="_blank">
+<ul style="width: 20%" class="list-group" *ngFor="let dish of dishes">
+    <a routerLink="/dish/{{dish._id}}">
         <li class="list-group-item list-group-item-action">
-            {{d.name}}
+            {{dish.name}}
         </li>
     </a>
 </ul>

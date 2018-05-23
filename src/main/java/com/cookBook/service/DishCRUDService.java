@@ -33,4 +33,9 @@ public class DishCRUDService {
         dishes.stream().forEach(dish -> dishDTOs.add(new DishDTO().dishToDTO(dish)));
         return dishDTOs.stream().sorted(Comparator.comparingLong(DishDTO::getId).reversed()).collect(Collectors.toList());
     }
+
+    public DishDTO findById(Long id) {
+        Dish dish = dishRepository.getOne(id);
+        return new DishDTO().dishToDTO(dish);
+    }
 }

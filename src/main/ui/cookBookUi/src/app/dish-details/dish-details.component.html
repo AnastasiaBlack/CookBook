@@ -1,3 +1,10 @@
 <p>
   dish-details works!
 </p>
+<div *ngIf="dish">
+  <h2>{{ dish.name | uppercase }} Details</h2>
+  <!--
+  <img [src]="pokemon.image">
+  <p>Evolved from: {{pokemon.evolves_from}}</p>
+  -->
+</div>
