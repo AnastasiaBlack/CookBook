@@ -21,7 +21,7 @@ export class DishService {
     }
 
     getDishById(id: string): Observable<any> {
-        const url = '${this.url}/${id}';
+        const url = this.url + '/' + id;
         return this.http.get<any>(url);
     }
 }

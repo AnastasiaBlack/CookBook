@@ -36,7 +36,7 @@ public class WelcomeController {
         return dishCRUDService.getAll();
     }
 
-    @RequestMapping("/dish/{id}")
+    @RequestMapping(value = "/dish/{id}", method = RequestMethod.GET)
     public DishDTO getDishById(@PathVariable Long id) {
         return dishCRUDService.findById(id);
     }

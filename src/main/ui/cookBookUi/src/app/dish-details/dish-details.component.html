@@ -1,10 +1,19 @@
 <p>
-  dish-details works!
+    dish-details component works!
 </p>
 <div *ngIf="dish">
-  <h2>{{ dish.name | uppercase }} Details</h2>
-  <!--
-  <img [src]="pokemon.image">
-  <p>Evolved from: {{pokemon.evolves_from}}</p>
-  -->
+    <h2 style="text-align: center">{{ dish.name }}</h2>
+
+    <h4>Id:</h4>
+    <p>{{dish.id}}</p>
+
+    <h4>Ingredients:</h4>
+    <p>{{dish.ingredients}}</p>
+
+    <h4>Recipe:</h4>
+    <p>{{dish.description}}</p>
+    <!--
+    <img [src]="pokemon.image">
+    <p>Evolved from: {{pokemon.evolves_from}}</p>
+    -->
 </div>

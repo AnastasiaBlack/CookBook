@@ -11,7 +11,7 @@ public class Dish {
     @Id
     @Column(name = "DishID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
     @NotBlank
     private String name;
@@ -26,11 +26,11 @@ public class Dish {
     public Dish() {
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
